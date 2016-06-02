@@ -1,0 +1,28 @@
+
+<h1>Here is your car</h1>
+
+<!-- After car creation, display attributes.-->
+<!-- Unpack string form of car object and display attributes -->
+<h2>Make: <%= YAML.load(cookies[:new_car]).make %></h2>
+<h2>Model:<%= YAML.load(cookies[:new_car]).model %></h2>
+<h2>Year: <%= YAML.load(cookies[:new_car]).year %></h2>
+<h2>Speed: <%= YAML.load(cookies[:new_car]).speed %></h2>
+
+<form action="/simulator/accelerate" method="get">
+  <input type="submit" value="Accelerate"/>
+</form>
+<form action="/simulator/brake" method="get">
+  <input type="submit" value="Brake"/>
+</form>
+<form action="/simulator/toggle_parking_brake" method="get">
+  <input type="submit" value="Toggle Parking Brake"/>
+</form>
+
+
+<div class="container">
+	<h1></h1>
+	<span>
+		<div class="switchbtn"></div>
+		<input type="checkbox" name="off_off_switch" class="switch_checkbox">
+	</span>
+</div>
